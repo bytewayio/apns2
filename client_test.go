@@ -17,9 +17,9 @@ import (
 
 	"golang.org/x/net/http2"
 
-	apns "apns2"
-	"apns2/certificate"
-	"apns2/token"
+	apns "github.com/bytewayio/apns2"
+	"github.com/bytewayio/apns2/certificate"
+	"github.com/bytewayio/apns2/token"
 
 	"github.com/stretchr/testify/assert"
 )
@@ -128,7 +128,7 @@ func TestDialTLSTimeout(t *testing.T) {
 	if _, e = dialTLS("tcp", address, nil); e == nil {
 		t.Fatal("Dial completed successfully")
 	}
-	if !strings.Contains(e.Error(), "timed out") {
+	if !strings.Contains(e.Error(), "deadline exceeded") {
 		t.Errorf("resulting error not a timeout: %s", e)
 	}
 }

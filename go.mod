@@ -1,4 +1,4 @@
-module apns2
+module github.com/bytewayio/apns2
 
 go 1.17
 

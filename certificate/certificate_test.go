@@ -6,7 +6,7 @@ import (
 	"io/ioutil"
 	"testing"
 
-	"apns2/certificate"
+	"github.com/bytewayio/apns2/certificate"
 
 	"github.com/stretchr/testify/assert"
 )

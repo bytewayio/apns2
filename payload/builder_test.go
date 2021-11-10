@@ -4,7 +4,7 @@ import (
 	"encoding/json"
 	"testing"
 
-	. "apns2/payload"
+	. "github.com/bytewayio/apns2/payload"
 
 	"github.com/stretchr/testify/assert"
 )

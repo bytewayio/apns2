@@ -6,8 +6,8 @@ import (
 	"log"
 	"os"
 
-	"apns2"
-	"apns2/token"
+	"github.com/bytewayio/apns2"
+	"github.com/bytewayio/apns2/token"
 )
 
 func main() {

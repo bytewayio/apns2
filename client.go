@@ -14,7 +14,7 @@ import (
 	"net/http"
 	"time"
 
-	"apns2/token"
+	"github.com/bytewayio/apns2/token"
 
 	"golang.org/x/net/http2"
 )

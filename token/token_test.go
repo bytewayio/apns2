@@ -9,7 +9,7 @@ import (
 	"testing"
 	"time"
 
-	"apns2/token"
+	"github.com/bytewayio/apns2/token"
 
 	"github.com/stretchr/testify/assert"
 )

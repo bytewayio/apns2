@@ -6,8 +6,8 @@ import (
 	"log"
 	"os"
 
-	"apns2"
-	"apns2/certificate"
+	"github.com/bytewayio/apns2"
+	"github.com/bytewayio/apns2/certificate"
 )
 
 func main() {

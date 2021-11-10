@@ -7,9 +7,9 @@ import (
 
 	"flag"
 
-	"apns2"
-	"apns2/certificate"
-	"apns2/payload"
+	"github.com/bytewayio/apns2"
+	"github.com/bytewayio/apns2/certificate"
+	"github.com/bytewayio/apns2/payload"
 )
 
 func main() {

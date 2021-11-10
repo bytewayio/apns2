@@ -3,7 +3,7 @@ package apns2_test
 import (
 	"testing"
 
-	"apns2"
+	"github.com/bytewayio/apns2"
 
 	"github.com/stretchr/testify/assert"
 )
