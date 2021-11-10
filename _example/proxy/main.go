@@ -10,8 +10,9 @@ import (
 	"os"
 	"time"
 
-	"github.com/sideshow/apns2"
-	"github.com/sideshow/apns2/certificate"
+	"apns2"
+	"apns2/certificate"
+
 	"golang.org/x/net/http2"
 )
 

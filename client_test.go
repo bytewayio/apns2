@@ -17,9 +17,10 @@ import (
 
 	"golang.org/x/net/http2"
 
-	apns "github.com/sideshow/apns2"
-	"github.com/sideshow/apns2/certificate"
-	"github.com/sideshow/apns2/token"
+	apns "apns2"
+	"apns2/certificate"
+	"apns2/token"
+
 	"github.com/stretchr/testify/assert"
 )
 
@@ -110,18 +111,6 @@ func TestClientBadDeviceToken(t *testing.T) {
 	res, err := mockClient("https://api.push.apple.com").Push(n)
 	assert.Error(t, err)
 	assert.Nil(t, res)
-}
-
-func TestClientNameToCertificate(t *testing.T) {
-	crt, _ := certificate.FromP12File("certificate/_fixtures/certificate-valid.p12", "")
-	client := apns.NewClient(crt)
-	name := client.HTTPClient.Transport.(*http2.Transport).TLSClientConfig.NameToCertificate
-	assert.Len(t, name, 1)
-
-	certificate2 := tls.Certificate{}
-	client2 := apns.NewClient(certificate2)
-	name2 := client2.HTTPClient.Transport.(*http2.Transport).TLSClientConfig.NameToCertificate
-	assert.Len(t, name2, 0)
 }
 
 func TestDialTLSTimeout(t *testing.T) {
